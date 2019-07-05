@@ -55,7 +55,7 @@ public class Begikas {
 		 * @param laikas
 		 * @return
 		 */
-		public double begtiLaika (double laikas) {
+		public void begtiLaika (double laikas) {
 			
 			this.nubegtas_atstumas = 
 					
@@ -66,6 +66,10 @@ public class Begikas {
 							( 1 - ( this.istvermes_koeficientas * ( ( laikas - 720 ) / 60 ) ) ) 
 						
 						;
+		}
+		
+		public double kiekNubego() {
+			
 			return this.nubegtas_atstumas;
 		}
 }
