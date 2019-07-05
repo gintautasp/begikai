@@ -10,6 +10,8 @@ public class Begikas {
 		
 		public double km_per_12min;
 		
+		public double nubegtas_atstumas;
+		
 		public double istvermes_koeficientas = 0.004; // atstumo sumaşëjimas nuo min.
 		
 		/**
@@ -55,7 +57,7 @@ public class Begikas {
 		 */
 		public double begtiLaika (double laikas) {
 			
-			double nubegtas_atstumas = 
+			this.nubegtas_atstumas = 
 					
 							km_per_12min 
 						* 
@@ -64,6 +66,6 @@ public class Begikas {
 							( 1 - ( this.istvermes_koeficientas * ( ( laikas - 720 ) / 60 ) ) ) 
 						
 						;
-			return nubegtas_atstumas;
+			return this.nubegtas_atstumas;
 		}
 }
